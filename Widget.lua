@@ -133,14 +133,30 @@ function ReturnBuffTracker:CreateInfoBar(text, r, g, b)
         GameTooltip:Hide()
     end)
     
-    theBar:SetScript("OnMouseDown", function(self) ReturnBuffTracker.mainFrame:StartMoving() end)
-    theBar:SetScript("OnMouseUp", function(self)
-        ReturnBuffTracker.mainFrame:StopMovingOrSizing()
-        if not ReturnBuffTracker.db.profile.position then
-            ReturnBuffTracker.db.profile.position = {}
+    theBar:SetScript("OnMouseDown", function(self)
+        local shift_key = IsShiftKeyDown()
+        if shift_key then
+        else
+            ReturnBuffTracker.mainFrame:StartMoving()
         end
-        ReturnBuffTracker.db.profile.position.x = ReturnBuffTracker.mainFrame:GetLeft()
-        ReturnBuffTracker.db.profile.position.y = ReturnBuffTracker.mainFrame:GetBottom()
+    end)
+    theBar:SetScript("OnMouseUp", function(self)
+        local shift_key = IsShiftKeyDown()
+        if shift_key then
+            --DEFAULT_CHAT_FRAME:AddMessage("Missing " .. self.text .. ": ")
+            if self.tooltip then
+                for k, v in ipairs(self.tooltip) do
+                    SendChatMessage(v ,"RAID_WARNING")
+                end
+            end
+        else
+            ReturnBuffTracker.mainFrame:StopMovingOrSizing()
+            if not ReturnBuffTracker.db.profile.position then
+                ReturnBuffTracker.db.profile.position = {}
+            end
+            ReturnBuffTracker.db.profile.position.x = ReturnBuffTracker.mainFrame:GetLeft()
+            ReturnBuffTracker.db.profile.position.y = ReturnBuffTracker.mainFrame:GetBottom()
+        end
     end)
             
     return theBar
