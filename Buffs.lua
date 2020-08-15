@@ -157,6 +157,7 @@ ReturnBuffTracker.Buffs = {
         color = {r = 0, g = 0, b = 0},
         buffOptionsGroup = "World"
     },
+
     [19] = {
         name = "Fengus' Ferocity",
         shortName = "DMT AP",
@@ -164,13 +165,15 @@ ReturnBuffTracker.Buffs = {
         classes = {"WARRIOR", "ROGUE"},
         buffOptionsGroup = "World"
     },
+
     [20] = {
         name = "Slip'kik's Savvy",
         shortName = "DMT Crit",
-        classes = { "WARLOCK", "PRIEST", "PALADIN", "DRUID", "MAGE", "SHAMAN" },
+        classes = {"WARLOCK", "PRIEST", "PALADIN", "DRUID", "MAGE", "SHAMAN"},
         color = {r = 0, g = 1, b = 1},
         buffOptionsGroup = "World"
     },
+ 
     [21] = {
         name = "Mol'dar's Moxie",
         shortName = "DMT Stamina",
@@ -179,21 +182,24 @@ ReturnBuffTracker.Buffs = {
     },
 
     [22] = {
-        name = "Fire Protection",
-        shortName = "Fire Protection",
-        optionText = "Greater Fire Protection Potion",
-        color = {r = 1, g = 0, b = 0},
-        buffOptionsGroup = "Consumable"
+        name = "Sayge's Dark Fortune of Damage",
+        shortName = "DMF Damage",
+        color = {r = 0, g = 1, b = 1},
+        buffIDs = {23768},
+        buffOptionsGroup = "World",
+        classes = {"HUNTER", "WARRIOR", "ROGUE", "WARLOCK", "MAGE"}
     },
 
     [23] = {
         name = "Greater Arcane Elixir",
         shortName = "Greater Arcane E.",
+        optionText = "Greater Arcane Elixir",
         color = {r = 0.58, g = 0.51, b = 0.79},
         buffIDs = {17539},
         buffOptionsGroup = "Consumable",
         classes = {"WARLOCK", "MAGE"}
     },
+
     [24] = {
         name = "Elixir of Shadow Power",
         shortName = "E. Shadow Power",
@@ -202,6 +208,7 @@ ReturnBuffTracker.Buffs = {
         buffOptionsGroup = "Consumable",
         classes = {"WARLOCK"}
     },
+
     [25] = {
         name = "Elixir of the Mongoose",
         shortName = "Mongoose",
@@ -210,6 +217,7 @@ ReturnBuffTracker.Buffs = {
         buffOptionsGroup = "Consumable",
         classes = {"WARRIOR", "ROGUE", "HUNTER"}
     },
+
     [26] = {
         name = "Juju Power",
         shortName = "Juju Power",
@@ -218,6 +226,7 @@ ReturnBuffTracker.Buffs = {
         buffOptionsGroup = "Consumable",
         classes = {"WARRIOR", "ROGUE"},
     },
+
     [27] = {
         name = "Juju Might",
         shortName = "Juju Might",
@@ -226,6 +235,7 @@ ReturnBuffTracker.Buffs = {
         buffOptionsGroup = "Consumable",
         classes = {"WARRIOR", "ROGUE","HUNTER"},
     },
+
     [28] = {
         name = "Winterfall Firewater",
         shortName = "Firewater",
@@ -234,6 +244,7 @@ ReturnBuffTracker.Buffs = {
         buffOptionsGroup = "Consumable",
         classes = {"WARRIOR", "ROGUE"},
     },
+
     [29] = {
         name = "Elixir of Fortitude",
         shortName = "E. Fortitude",
@@ -241,6 +252,51 @@ ReturnBuffTracker.Buffs = {
         buffIDs = {3593},
         buffOptionsGroup = "Consumable",
         classes = {"WARRIOR", "ROGUE"},
+    },
+
+    [30] = {
+        name = "Fire Protection",
+        shortName = "Fire Protection",
+        optionText = "Greater Fire Protection Potion",
+        color = {r = 1, g = 0, b = 0},
+        buffIDs = {17543},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [31] = {
+        name = "Nature Protection",
+        shortName = "Nature Protection",
+        optionText = "Greater Nature Protection Potion",
+        color = {r = 0, g = 1, b = 0},
+        buffIDs = {17546},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [32] = {
+        name = "Shadow Protection",
+        shortName = "Shadow Protection",
+        optionText = "Greater Shadow Protection Potion",
+        color = {r = 0.5, g = 0, b = 0.5},
+        buffIDs = {17548},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [33] = {
+        name = "Arcane Protection",
+        shortName = "Arcane Protection",
+        optionText = "Greater Arcane Protection Potion",
+        color = {r = 0, g = 0, b = 1},
+        buffIDs = {17549},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [34] = {
+        name = "Frost Protection",
+        shortName = "Frost Protection",
+        optionText = "Greater Frost Protection Potion",
+        color = {r = 0, g = 1, b = 1},
+        buffIDs = {17544},
+        buffOptionsGroup = "Consumable"
     },
 }
 
