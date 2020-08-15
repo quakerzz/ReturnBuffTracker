@@ -422,6 +422,7 @@ function ReturnBuffTracker:CheckBuff(buff)
     tooltip[2] = "no one."
 
     groups = {}
+    local i = 2
 
     if buff.missingMode == "class" then
         for k, player in pairs(players) do
@@ -435,23 +436,30 @@ function ReturnBuffTracker:CheckBuff(buff)
                                             player.name
         end
 
+        for _, group in pairs(groups) do
+            tooltip[i] = group.text
+            i = i + 1
+        end
     else
         for k, player in pairs(players) do
-            if not groups[player.group] then
-                groups[player.group] = {
+            if not groups[tonumber(player.group)] then
+                groups[tonumber(player.group)] = {
                     count = 0,
                     text = "Group " .. player.group .. ":"
                 }
             end
-            groups[player.group].text = groups[player.group].text .. " " ..
+            groups[tonumber(player.group)].text = groups[tonumber(player.group)].text .. " " ..
                                             player.name
         end
-    end
+        
+        groupskeys = {}
+        for k in pairs(groups) do table.insert(groupskeys, k) end
+        table.sort(groupskeys)
 
-    local i = 2
-    for _, group in pairs(groups) do
-        tooltip[i] = group.text
-        i = i + 1
+        for _, k in ipairs(groupskeys) do
+            tooltip[i] = groups[k].text
+            i = i + 1
+        end
     end
 
     return buffs, totalBuffs, tooltip
