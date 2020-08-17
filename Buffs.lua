@@ -228,6 +228,15 @@ ReturnBuffTracker.Buffs = {
     },
 
     [27] = {
+        name = "Juju Power / Giant Elixir",
+        shortName = "Strength Buff",
+        color = {r = 0.58, g = 0.51, b = 0.79},
+        buffIDs = {11405, 16323},
+        buffOptionsGroup = "Consumable",
+        classes = {"WARRIOR", "ROGUE"},
+    },
+
+    [28] = {
         name = "Juju Might",
         shortName = "Juju Might",
         color = {r = 0.58, g = 0.51, b = 0.79},
@@ -236,7 +245,7 @@ ReturnBuffTracker.Buffs = {
         classes = {"WARRIOR", "ROGUE","HUNTER"},
     },
 
-    [28] = {
+    [29] = {
         name = "Winterfall Firewater",
         shortName = "Firewater",
         color = {r = 0.58, g = 0.51, b = 0.79},
@@ -245,7 +254,16 @@ ReturnBuffTracker.Buffs = {
         classes = {"WARRIOR", "ROGUE"},
     },
 
-    [29] = {
+    [30] = {
+        name = "Juju Might / Firewater",
+        shortName = "AP Buff",
+        color = {r = 0.58, g = 0.51, b = 0.79},
+        buffIDs = {16329, 17038},
+        buffOptionsGroup = "Consumable",
+        classes = {"WARRIOR", "ROGUE"},
+    },
+
+    [31] = {
         name = "Elixir of Fortitude",
         shortName = "E. Fortitude",
         color = {r = 0.58, g = 0.51, b = 0.79},
@@ -254,45 +272,72 @@ ReturnBuffTracker.Buffs = {
         classes = {"WARRIOR", "ROGUE"},
     },
 
-    [30] = {
+    [32] = {
         name = "Fire Protection",
-        shortName = "Fire Protection",
+        shortName = "Fire Prot.",
+        optionText = "(Greater) Fire Protection Potion",
+        color = {r = 1, g = 0, b = 0},
+        buffIDs = {7233, 17543},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [33] = {
+        name = "Greater Fire Protection",
+        shortName = "Greater Fire Prot.",
         optionText = "Greater Fire Protection Potion",
         color = {r = 1, g = 0, b = 0},
         buffIDs = {17543},
         buffOptionsGroup = "Consumable"
     },
 
-    [31] = {
+    [34] = {
         name = "Nature Protection",
-        shortName = "Nature Protection",
+        shortName = "Nature Prot.",
+        optionText = "(Greater) Nature Protection Potion",
+        color = {r = 0, g = 1, b = 0},
+        buffIDs = {7254, 17546},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [35] = {
+        name = "Greater Nature Protection",
+        shortName = "Greater Nature Prot.",
         optionText = "Greater Nature Protection Potion",
         color = {r = 0, g = 1, b = 0},
         buffIDs = {17546},
         buffOptionsGroup = "Consumable"
     },
 
-    [32] = {
+    [36] = {
         name = "Shadow Protection",
-        shortName = "Shadow Protection",
+        shortName = "Shadow Prot.",
+        optionText = "(Greater) Shadow Protection Potion",
+        color = {r = 0.5, g = 0, b = 0.5},
+        buffIDs = {7242, 17548},
+        buffOptionsGroup = "Consumable"
+    },
+
+    [37] = {
+        name = "Greater Shadow Protection",
+        shortName = "Greater Shadow Prot.",
         optionText = "Greater Shadow Protection Potion",
         color = {r = 0.5, g = 0, b = 0.5},
         buffIDs = {17548},
         buffOptionsGroup = "Consumable"
     },
 
-    [33] = {
+    [38] = {
         name = "Arcane Protection",
-        shortName = "Arcane Protection",
+        shortName = "Arcane Prot.",
         optionText = "Greater Arcane Protection Potion",
         color = {r = 0, g = 0, b = 1},
         buffIDs = {17549},
         buffOptionsGroup = "Consumable"
     },
 
-    [34] = {
+    [39] = {
         name = "Frost Protection",
-        shortName = "Frost Protection",
+        shortName = "Frost Prot.",
         optionText = "Greater Frost Protection Potion",
         color = {r = 0, g = 1, b = 1},
         buffIDs = {17544},
